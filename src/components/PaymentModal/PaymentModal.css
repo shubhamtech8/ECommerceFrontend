@@ -1,0 +1,417 @@
+/* ── Backdrop ───────────────────────────────────────────── */
+.pm-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 16px;
+  animation: pmFade 0.18s ease;
+}
+
+@keyframes pmFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── Box ────────────────────────────────────────────────── */
+.pm-box {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 460px;
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+  animation: pmSlide 0.22s ease;
+}
+
+@keyframes pmSlide {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.pm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pm-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pm-header h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.pm-back {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #2874f0;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  line-height: 1;
+  transition: background 0.15s;
+}
+.pm-back:hover {
+  background: #f0f5ff;
+}
+
+.pm-close {
+  background: none;
+  border: none;
+  font-size: 17px;
+  color: #aaa;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.pm-close:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* ── Body ───────────────────────────────────────────────── */
+.pm-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pm-amount-line {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.pm-amount-line strong {
+  font-size: 18px;
+  color: #212121;
+}
+
+/* ── Payment Option Cards ───────────────────────────────── */
+.pm-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pm-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background 0.15s;
+}
+
+.pm-option:hover {
+  border-color: #2874f0;
+  box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.1);
+  background: #fafcff;
+}
+
+.pm-option-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.cod-icon {
+  background: #fff8e7;
+}
+.card-icon {
+  background: #f0f5ff;
+}
+
+.pm-option-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pm-option-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.pm-option-desc {
+  font-size: 12px;
+  color: #888;
+}
+
+.pm-option-arrow {
+  font-size: 22px;
+  color: #bbb;
+  font-weight: 300;
+}
+
+/* ── COD Confirm ────────────────────────────────────────── */
+.cod-confirm-block {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cod-icon-large {
+  font-size: 52px;
+  margin-bottom: 4px;
+}
+
+.cod-confirm-block h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #212121;
+}
+
+.cod-confirm-block p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.cod-summary {
+  width: 100%;
+  background: #f7f9fc;
+  border-radius: 6px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cod-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #444;
+}
+
+.cod-row strong {
+  color: #212121;
+  font-size: 15px;
+}
+
+/* ── Stripe Card Form ───────────────────────────────────── */
+.card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.cf-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cf-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.required {
+  color: #e53935;
+}
+
+/* Plain input (cardholder name) */
+.cf-input {
+  padding: 9px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #212121;
+  background: #fafafa;
+  outline: none;
+  font-family: inherit;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.cf-input:focus {
+  border-color: #2874f0;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.12);
+}
+
+.cf-input.cf-error {
+  border-color: #e53935;
+  background: #fff8f8;
+}
+
+/* Stripe hosted element wrapper — mimics the input style */
+.stripe-element-wrap {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  /* Stripe mounts an iframe here — needs explicit height */
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.stripe-element-wrap:focus-within {
+  border-color: #2874f0;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.12);
+}
+
+.stripe-element-wrap.stripe-error {
+  border-color: #e53935;
+  background: #fff8f8;
+}
+
+/* The Stripe iframe fills the wrapper */
+.stripe-element-wrap > * {
+  width: 100%;
+}
+
+.cf-err-msg {
+  font-size: 11px;
+  color: #e53935;
+  font-weight: 500;
+}
+
+/* Global Stripe error banner */
+.stripe-global-error {
+  background: #fff0f0;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #c62828;
+  font-weight: 500;
+}
+
+.secure-note {
+  font-size: 12px;
+  color: #26a541;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.pm-footer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-top: 8px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 4px;
+}
+
+.btn-pm-cancel {
+  padding: 9px 18px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-pm-cancel:hover {
+  background: #f5f5f5;
+}
+
+.btn-pm-confirm {
+  padding: 9px 22px;
+  background: #fb641b;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  transition:
+    background 0.15s,
+    opacity 0.15s;
+}
+.btn-pm-confirm:hover:not(:disabled) {
+  background: #e05615;
+}
+.btn-pm-confirm:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .cf-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pm-footer {
+    flex-direction: column;
+  }
+
+  .btn-pm-cancel,
+  .btn-pm-confirm {
+    width: 100%;
+    text-align: center;
+  }
+}
