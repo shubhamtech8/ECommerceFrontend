@@ -35,6 +35,8 @@ export interface PaymentResult {
   method: PaymentMethod;
   stripePaymentMethodId?: string;
   stripePaymentIntentId?: string;
+  orderId?: number | string;
+  orderNumber?: string;
 }
 
 interface PaymentModalProps {

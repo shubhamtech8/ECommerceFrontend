@@ -16,17 +16,11 @@ import {
 import "./ProductManagement.css";
 import type {
   Brand,
-  BrandInput,
   Category,
-  CategoryInput,
   Product,
-  ProductInput,
   ProductReview,
-  ProductReviewInput,
   ProductVariant,
-  ProductVariantInput,
   SubCategory,
-  SubCategoryInput,
 } from "./productTypes";
 
 
