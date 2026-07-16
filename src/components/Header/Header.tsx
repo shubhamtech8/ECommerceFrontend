@@ -13,7 +13,7 @@ const Header = () => {
         <div className="header-left">
           <div className="logo" onClick={() => navigate("/")}>
             <span className="logo-icon">🛒</span>
-            <span className="logo-text">ECart</span>
+            <span className="logo-text">ECart Test</span>
           </div>
         </div>
 
